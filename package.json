@@ -1,0 +1,20 @@
+{
+  "name": "splitter",
+  "description": "Stream splitter using new streams",
+  "author": "Eirik Albrigtsen <analsandblaster@gmail.com>",
+  "version": "0.0.0",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/clux/splitter.git"
+  },
+  "keywords": [],
+  "main": "splitter.js",
+  "dependencies": {},
+  "bugs": {
+    "url": "http://github.com/clux/splitter/issues"
+  },
+  "engines" : {
+    "node" : ">=0.9.7"
+  },
+  "license": "MIT"
+}
