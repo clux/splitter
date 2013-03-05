@@ -11,15 +11,22 @@ function Splitter(matcher, opts) {
 }
 inherits(Splitter, Transform);
 
-Splitter.prototype._transform = function (chunk, output, done) {
-  var pieces = (this.buffer + chunk.toString()).split(this.matcher);
+Splitter.prototype._transform = function (chunk, output, cb) {
+  var pieces = (this.buffer + chunk).split(this.matcher);
   this.buffer = pieces.pop();
   for (var i = 0; i < pieces.length; i += 1) {
-    output(null, pieces[i]);
+    output(pieces[i]);
   }
-  done();
+  cb();
 };
 
-// no _flush method as anything left in buffer should be discarded
+Splitter.prototype._flush = function (output, cb) {
+  output(this.buffer);
+  cb();
+};
 
 module.exports = Splitter;
+
+if (module === require.main) {
+  process.stdin.pipe(Splitter()).pipe(process.stdout)
+}
