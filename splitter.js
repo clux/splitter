@@ -28,5 +28,5 @@ Splitter.prototype._flush = function (output, cb) {
 module.exports = Splitter;
 
 if (module === require.main) {
-  process.stdin.pipe(Splitter()).pipe(process.stdout)
+  process.stdin.pipe(Splitter()).pipe(process.stdout);
 }

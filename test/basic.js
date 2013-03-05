@@ -38,7 +38,8 @@ Collector.prototype._write = function (chunk, cb) {
 };
 
 test("sample buffer", function (t) {
-  t.plan(1)
+  t.plan(1);
+
   // dont end in newline so we know _flush works
   var buff = "hi there miss\nnice to meat you\n!!";
   var onFinish = function (res) {
