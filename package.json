@@ -10,11 +10,17 @@
   "keywords": [],
   "main": "splitter.js",
   "dependencies": {},
+  "scripts": {
+    "test": "tap ./test/basic.js"
+  },
+  "devDependencies": {
+    "tap": "~0.4.0"
+  },
   "bugs": {
     "url": "http://github.com/clux/splitter/issues"
   },
   "engines" : {
-    "node" : ">=0.9.7"
+    "node" : ">=0.9.12"
   },
   "license": "MIT"
 }
