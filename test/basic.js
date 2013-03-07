@@ -32,7 +32,7 @@ function Collector(onFinish) {
 }
 inherits(Collector, stream.Writable);
 
-Collector.prototype._write = function (chunk, cb) {
+Collector.prototype._write = function (chunk, encoding, cb) {
   this.buf += chunk;
   cb(null);
 };

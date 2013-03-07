@@ -11,17 +11,17 @@ function Splitter(matcher, opts) {
 }
 inherits(Splitter, Transform);
 
-Splitter.prototype._transform = function (chunk, output, cb) {
+Splitter.prototype._transform = function (chunk, encoding, cb) {
   var pieces = (this.buffer + chunk).split(this.matcher);
   this.buffer = pieces.pop();
   for (var i = 0; i < pieces.length; i += 1) {
-    output(pieces[i]);
+    this.push(pieces[i]);
   }
   cb();
 };
 
-Splitter.prototype._flush = function (output, cb) {
-  output(this.buffer);
+Splitter.prototype._flush = function (cb) {
+  this.push(this.buffer);
   cb();
 };
 
