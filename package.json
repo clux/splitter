@@ -2,7 +2,7 @@
   "name": "splitter",
   "description": "Stream splitter using new streams",
   "author": "Eirik Albrigtsen <analsandblaster@gmail.com>",
-  "version": "0.0.1",
+  "version": "0.1.0",
   "repository": {
     "type": "git",
     "url": "git://github.com/clux/splitter.git"
