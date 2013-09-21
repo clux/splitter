@@ -1,4 +1,4 @@
-# Splitter [![Build Status](https://secure.travis-ci.org/clux/splitter.png)](http://travis-ci.org/clux/splitter)
+# Splitter [![Build Status](https://secure.travis-ci.org/clux/splitter.png)](http://travis-ci.org/clux/splitter) [![Dependency Status](https://david-dm.org/clux/splitter.png)](https://david-dm.org/clux/splitter)
 
 Splitter is a more or less direct port of the old streams module `split` using streams2, and is thus dependency free (apart from node ~0.10 and its core libs).
 

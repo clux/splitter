@@ -5,7 +5,7 @@
   "version": "0.1.1",
   "repository": {
     "type": "git",
-    "url": "git://github.com/clux/splitter.git"
+    "url": "clux/splitter"
   },
   "keywords": [],
   "main": "splitter.js",
@@ -14,7 +14,7 @@
     "test": "tap ./test/*.js"
   },
   "devDependencies": {
-    "tap": "~0.4.0"
+    "tap": "~0.4.4"
   },
   "bugs": {
     "url": "http://github.com/clux/splitter/issues"
