@@ -7,7 +7,7 @@
     "type": "git",
     "url": "clux/splitter"
   },
-  "keywords": [],
+  "keywords": ["transform", "split"],
   "main": "splitter.js",
   "dependencies": {},
   "scripts": {

@@ -1,16 +1,13 @@
 var test = require('tap').test
   , splitter = require('../')
-  , stream = require('stream')
-  , inherits = require('util').inherits;
-
+  , stream = require('stream');
 
 // basic read stream that will emit data given
 function Pumper(data) {
   stream.Readable.call(this, {});
   this.data = data;
 }
-inherits(Pumper, stream.Readable);
-
+Pumper.prototype = Object.create(stream.Readable.prototype);
 Pumper.prototype._read = function (size) {
   if (!this.data.length) {
     this.push(null);
@@ -30,8 +27,7 @@ function Collector(onFinish) {
     onFinish(this.buf);
   });
 }
-inherits(Collector, stream.Writable);
-
+Collector.prototype = Object.create(stream.Writable.prototype);
 Collector.prototype._write = function (chunk, encoding, cb) {
   this.buf += chunk;
   cb(null);

@@ -1,5 +1,4 @@
 var Transform = require('stream').Transform;
-var inherits = require('util').inherits;
 
 function Splitter(matcher, opts) {
   if (!(this instanceof Splitter)) {
@@ -9,7 +8,7 @@ function Splitter(matcher, opts) {
   this.matcher = matcher || '\n';
   this.buffer = '';
 }
-inherits(Splitter, Transform);
+Splitter.prototype = Object.create(Transform.prototype);
 
 Splitter.prototype._transform = function (chunk, encoding, cb) {
   var pieces = (this.buffer + chunk).split(this.matcher);
