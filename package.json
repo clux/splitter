@@ -2,12 +2,15 @@
   "name": "splitter",
   "description": "Stream splitter using new streams",
   "author": "Eirik Albrigtsen <analsandblaster@gmail.com>",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "repository": {
     "type": "git",
     "url": "clux/splitter"
   },
-  "keywords": ["transform", "split"],
+  "keywords": [
+    "transform",
+    "split"
+  ],
   "main": "splitter.js",
   "dependencies": {},
   "scripts": {
